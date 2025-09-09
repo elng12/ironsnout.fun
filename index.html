@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Snout - Free Online Fighting Game | Play Now</title>
+    <meta name="description" content="Play Iron Snout, a fast-paced pig fighting game. Battle wolves using martial arts in this free browser game. No downloads needed!">
+    <meta name="keywords" content="Iron Snout, fighting game, browser game, free online game, beat em up, arcade fighter">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ironsnout.fun/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Iron Snout - Free Fighting Game">
+    <meta property="og:description" content="Help a brave pig fight wolves in this addictive browser game">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ironsnout.fun/">
+    <meta property="og:image" content="https://ironsnout.fun/Generated Image September 09, 2025 - 10_42PM.png">
+    
+    <!-- Mobile Optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        .logo-img {
+            filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.5));
+            transition: transform 0.3s ease;
+        }
+        .logo-img:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Iron Snout",
+        "description": "Fast-paced fighting game featuring a pig warrior battling wolves",
+        "genre": "Fighting Game",
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web Browser",
+        "url": "https://ironsnout.fun/"
+    }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gray-800/95 backdrop-blur-sm z-50 border-b border-gray-700">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="Generated Image September 09, 2025 - 10_42PM.png" alt="Game Logo" class="w-12 h-12 object-contain logo-img">
+                <span class="text-2xl font-bold text-orange-500">Iron Snout</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#game" class="hover:text-orange-400 transition">Play</a>
+                <a href="#about" class="hover:text-orange-400 transition">About</a>
+                <a href="#guide" class="hover:text-orange-400 transition">Guide</a>
+                <a href="#faq" class="hover:text-orange-400 transition">FAQ</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Game -->
+    <section id="game" class="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div class="container mx-auto px-4 py-8">
+            <div class="text-center mb-6">
+                <h1 class="text-5xl md:text-7xl font-black mb-4 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                    Iron Snout
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 font-bold mb-4">
+                    Pig vs Wolves - The Ultimate Showdown
+                </p>
+                <p class="text-lg text-gray-400 mb-6 max-w-2xl mx-auto">
+                    Master martial arts as a fearless pig fighter. Defeat endless waves of wolves 
+                    using combos, weapon catches, and lightning-fast reflexes in this addictive brawler.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-6">
+                    <span class="bg-green-600 px-4 py-2 rounded-full text-sm font-semibold">
+                        ⚡ Instant Play
+                    </span>
+                    <span class="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
+                        🆓 100% Free
+                    </span>
+                    <span class="bg-purple-600 px-4 py-2 rounded-full text-sm font-semibold">
+                        📱 All Devices
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Game Container -->
+            <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
+                <div class="bg-gray-700 px-4 py-2 flex justify-between items-center">
+                    <span class="text-sm text-gray-300">🎮 Game Window</span>
+                    <button onclick="toggleFullscreen()" class="text-gray-300 hover:text-white">
+                        ⛶ Fullscreen
+                    </button>
+                </div>
+                <div class="relative w-full" style="padding-bottom: 60%;">
+                    <iframe 
+                        id="gameFrame"
+                        src="https://classroom8.github.io/iron-snout/" 
+                        class="absolute top-0 left-0 w-full h-full"
+                        frameborder="0" 
+                        allowfullscreen 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Features Section (Consolidated) -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                About The Game
+            </h2>
+            
+            <div class="max-w-4xl mx-auto mb-12">
+                <p class="text-lg text-gray-300 text-center mb-8">
+                    This fast-paced fighter puts you in control of a kung-fu pig defending against 
+                    relentless wolf packs. With simple controls but deep mechanics, it's easy to learn 
+                    yet challenging to master. Every battle is unique thanks to random enemy patterns 
+                    and diverse attack combinations.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-700 rounded-lg p-6 text-center">
+                        <div class="text-4xl mb-3">⚔️</div>
+                        <h3 class="text-xl font-semibold mb-2">Dynamic Combat</h3>
+                        <p class="text-gray-400">Chain combos, catch weapons, and counter attacks for high scores</p>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 text-center">
+                        <div class="text-4xl mb-3">🐺</div>
+                        <h3 class="text-xl font-semibold mb-2">Enemy Variety</h3>
+                        <p class="text-gray-400">Face wolves with cleavers, chainsaws, and rocket packs</p>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 text-center">
+                        <div class="text-4xl mb-3">🏆</div>
+                        <h3 class="text-xl font-semibold mb-2">Endless Challenge</h3>
+                        <p class="text-gray-400">Progressive difficulty keeps every session fresh and exciting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Play Guide (Simplified) -->
+    <section id="guide" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                    Quick Play Guide
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-orange-400">Controls</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li><strong>↑</strong> - Jump & uppercut</li>
+                            <li><strong>↓</strong> - Duck & leg sweep</li>
+                            <li><strong>←→</strong> - Attack left/right</li>
+                            <li><strong>Tap enemies</strong> - Mobile controls</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-orange-400">Pro Tips</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Stay centered for better positioning</li>
+                            <li>• Catch and throw back weapons</li>
+                            <li>• Chain attacks for combo multipliers</li>
+                            <li>• Prioritize ranged enemies first</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-orange-900/30 to-red-900/30 border border-orange-500/30 rounded-lg p-6 mt-8 text-center">
+                    <p class="text-lg text-gray-300">
+                        <strong>Goal:</strong> Survive as long as possible and achieve the highest score. 
+                        Every enemy defeated and combo performed adds to your points!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Info (Brief) -->
+    <section class="py-12 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-2xl font-bold mb-4">Game Information</h3>
+                <p class="text-gray-400 mb-6">
+                    Created by SnoutUp Games, this indie fighter has captivated millions of players worldwide. 
+                    Available on web browsers, Steam, and mobile devices, you can enjoy the action anywhere.
+                </p>
+                <div class="flex justify-center gap-4 flex-wrap">
+                    <span class="bg-gray-700 px-4 py-2 rounded">🌐 Browser</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded">💻 Steam</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded">📱 iOS/Android</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Essential Questions Only) -->
+    <section id="faq" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                    Frequently Asked Questions
+                </h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3">Is this game really free?</h3>
+                        <p class="text-gray-400">
+                            Yes! Completely free with no hidden costs, ads, or pay-to-win mechanics. 
+                            Just pure gaming fun accessible to everyone.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3">Do I need to download anything?</h3>
+                        <p class="text-gray-400">
+                            No downloads required. The game runs directly in your browser using HTML5. 
+                            Just click play and start fighting!
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3">Can I play on mobile?</h3>
+                        <p class="text-gray-400">
+                            Absolutely! Works perfectly on smartphones and tablets with touch controls. 
+                            The game automatically adapts to your device.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3">Is it suitable for kids?</h3>
+                        <p class="text-gray-400">
+                            Yes! Features cartoon graphics with no gore or inappropriate content. 
+                            Perfect for all ages while developing hand-eye coordination.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3">How do I get a high score?</h3>
+                        <p class="text-gray-400">
+                            Focus on combo chains, catch enemy weapons, and stay mobile. Practice timing 
+                            your attacks and learn enemy patterns for better performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-400 mb-2">© 2024 IronSnout.fun - Free Online Fighting Game</p>
+                <p class="text-sm text-gray-500">
+                    Play the best pig fighting game directly in your browser. No downloads, no fees, just fun!
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFullscreen() {
+            const gameFrame = document.getElementById('gameFrame');
+            if (!document.fullscreenElement) {
+                gameFrame.requestFullscreen().catch(err => {
+                    console.log(`Error: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
