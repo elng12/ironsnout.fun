@@ -1,25 +1,21 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap location
 Sitemap: https://ironsnout.fun/sitemap.xml
 
-# Allow all crawlers to access CSS and JS files
+# Allow crawlers to access all static assets
 Allow: /*.css$
 Allow: /*.js$
-
-# Allow access to images
 Allow: /*.png$
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.gif$
 Allow: /*.webp$
+Allow: /*.ico$
 
-# Block access to unnecessary files
-Disallow: /*.php$
+# Block access to system files and directories
+Disallow: /.htaccess
+Disallow: /.git/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /.git/
-
-# Crawl-delay (optional - remove if not needed)
-# Crawl-delay: 1
