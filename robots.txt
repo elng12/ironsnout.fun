@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ironsnout.fun/sitemap.xml
+
+# Allow all crawlers to access CSS and JS files
+Allow: /*.css$
+Allow: /*.js$
+
+# Allow access to images
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Block access to unnecessary files
+Disallow: /*.php$
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# Crawl-delay (optional - remove if not needed)
+# Crawl-delay: 1

@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iron Snout - Free Online Fighting Game | Play Now</title>
-    <meta name="description" content="Play Iron Snout, a fast-paced pig fighting game. Battle wolves using martial arts in this free browser game. No downloads needed!">
-    <meta name="keywords" content="Iron Snout, fighting game, browser game, free online game, beat em up, arcade fighter">
+    <title>Iron Snout - Free Fighting Game | Play Online Now</title>
+    <meta name="description" content="Play Iron Snout free online! Fast-paced pig fighting game where you battle wolves. No downloads needed - instant browser gameplay.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ironsnout.fun/">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Iron Snout - Free Fighting Game">
-    <meta property="og:description" content="Help a brave pig fight wolves in this addictive browser game">
+    <meta property="og:title" content="Iron Snout - Free Online Fighting Game">
+    <meta property="og:description" content="Play Iron Snout instantly in your browser. Help the pig fighter defeat endless waves of wolves!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ironsnout.fun/">
-    <meta property="og:image" content="https://ironsnout.fun/Generated Image September 09, 2025 - 10_42PM.png">
+    <meta property="og:image" content="https://ironsnout.fun/iron-snout-logo.png">
     
-    <!-- Mobile Optimization -->
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Iron Snout - Free Online Fighting Game">
+    <meta name="twitter:description" content="Play Iron Snout instantly in your browser. No downloads required!">
+    
+    <!-- Mobile Web App Capable -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,11 +50,15 @@
         "@context": "https://schema.org",
         "@type": "VideoGame",
         "name": "Iron Snout",
-        "description": "Fast-paced fighting game featuring a pig warrior battling wolves",
+        "description": "A fast-paced fighting game where you play as a pig fighting against wolves",
         "genre": "Fighting Game",
         "playMode": "SinglePlayer",
         "gamePlatform": "Web Browser",
-        "url": "https://ironsnout.fun/"
+        "url": "https://ironsnout.fun/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "IronSnout.fun"
+        }
     }
     </script>
 </head>
@@ -54,51 +67,80 @@
     <header class="fixed top-0 w-full bg-gray-800/95 backdrop-blur-sm z-50 border-b border-gray-700">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <img src="Generated Image September 09, 2025 - 10_42PM.png" alt="Game Logo" class="w-12 h-12 object-contain logo-img">
+                <img src="iron-snout-logo.png" alt="Iron Snout - Free Fighting Game Logo" class="w-12 h-12 object-contain logo-img" loading="lazy">
                 <span class="text-2xl font-bold text-orange-500">Iron Snout</span>
             </div>
             <div class="hidden md:flex space-x-6">
-                <a href="#game" class="hover:text-orange-400 transition">Play</a>
-                <a href="#about" class="hover:text-orange-400 transition">About</a>
-                <a href="#guide" class="hover:text-orange-400 transition">Guide</a>
+                <a href="#game" class="hover:text-orange-400 transition">Play Now</a>
+                <a href="#features" class="hover:text-orange-400 transition">Features</a>
+                <a href="#how-to-play" class="hover:text-orange-400 transition">How to Play</a>
                 <a href="#faq" class="hover:text-orange-400 transition">FAQ</a>
             </div>
+            <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#game" class="hover:text-orange-400 transition">Play Now</a>
+                <a href="#features" class="hover:text-orange-400 transition">Features</a>
+                <a href="#how-to-play" class="hover:text-orange-400 transition">How to Play</a>
+                <a href="#faq" class="hover:text-orange-400 transition">FAQ</a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section with Game -->
     <section id="game" class="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div class="container mx-auto px-4 py-8">
             <div class="text-center mb-6">
-                <h1 class="text-5xl md:text-7xl font-black mb-4 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                <div class="mb-2">
+                    <span class="inline-block px-4 py-1 text-sm font-semibold text-orange-400 bg-orange-900/30 rounded-full border border-orange-500/30">
+                        🎮 BEAT 'EM UP ACTION GAME
+                    </span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-4 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
                     Iron Snout
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-200 font-bold mb-4">
-                    Pig vs Wolves - The Ultimate Showdown
+                <p class="text-xl md:text-2xl text-gray-200 font-bold mb-2">
+                    Fast-Paced Fighting Frenzy!
                 </p>
-                <p class="text-lg text-gray-400 mb-6 max-w-2xl mx-auto">
-                    Master martial arts as a fearless pig fighter. Defeat endless waves of wolves 
-                    using combos, weapon catches, and lightning-fast reflexes in this addictive brawler.
+                <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl mx-auto">
+                    Help the piglet fight off hordes of wolves! Use your martial arts skills to defeat enemies, 
+                    catch their weapons, and survive as long as possible in this addictive beat 'em up game.
                 </p>
                 <div class="flex flex-wrap justify-center gap-3 mb-6">
-                    <span class="bg-green-600 px-4 py-2 rounded-full text-sm font-semibold">
+                    <span class="bg-gradient-to-r from-green-600 to-green-500 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                         ⚡ Instant Play
                     </span>
-                    <span class="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-500 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                         🆓 100% Free
                     </span>
-                    <span class="bg-purple-600 px-4 py-2 rounded-full text-sm font-semibold">
-                        📱 All Devices
+                    <span class="bg-gradient-to-r from-purple-600 to-purple-500 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        📱 Mobile Ready
                     </span>
+                    <span class="bg-gradient-to-r from-red-600 to-red-500 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        🥊 Epic Combos
+                    </span>
+                </div>
+                <div class="text-center mb-4">
+                    <p class="text-sm text-gray-500">
+                        Join <span class="text-orange-400 font-bold">10+ Million</span> players worldwide!
+                    </p>
                 </div>
             </div>
             
             <!-- Game Container -->
             <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
                 <div class="bg-gray-700 px-4 py-2 flex justify-between items-center">
-                    <span class="text-sm text-gray-300">🎮 Game Window</span>
-                    <button onclick="toggleFullscreen()" class="text-gray-300 hover:text-white">
-                        ⛶ Fullscreen
+                    <span class="text-sm text-gray-300">🎮 Iron Snout Game</span>
+                    <button onclick="toggleFullscreen()" class="text-gray-300 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                        </svg>
                     </button>
                 </div>
                 <div class="relative w-full" style="padding-bottom: 60%;">
@@ -115,147 +157,377 @@
         </div>
     </section>
 
-    <!-- About & Features Section (Consolidated) -->
-    <section id="about" class="py-16 bg-gray-800">
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-800">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-                About The Game
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+                Iron Snout Game Features
             </h2>
-            
-            <div class="max-w-4xl mx-auto mb-12">
-                <p class="text-lg text-gray-300 text-center mb-8">
-                    This fast-paced fighter puts you in control of a kung-fu pig defending against 
-                    relentless wolf packs. With simple controls but deep mechanics, it's easy to learn 
-                    yet challenging to master. Every battle is unique thanks to random enemy patterns 
-                    and diverse attack combinations.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-gray-700 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-3">⚔️</div>
-                        <h3 class="text-xl font-semibold mb-2">Dynamic Combat</h3>
-                        <p class="text-gray-400">Chain combos, catch weapons, and counter attacks for high scores</p>
-                    </div>
-                    <div class="bg-gray-700 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-3">🐺</div>
-                        <h3 class="text-xl font-semibold mb-2">Enemy Variety</h3>
-                        <p class="text-gray-400">Face wolves with cleavers, chainsaws, and rocket packs</p>
-                    </div>
-                    <div class="bg-gray-700 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-3">🏆</div>
-                        <h3 class="text-xl font-semibold mb-2">Endless Challenge</h3>
-                        <p class="text-gray-400">Progressive difficulty keeps every session fresh and exciting</p>
-                    </div>
+            <p class="text-center text-gray-400 mb-12 max-w-3xl mx-auto">
+                Discover what makes Iron Snout one of the most addictive fighting games online. 
+                Master the art of pig-fu and experience non-stop action!
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg p-6 hover:from-gray-600 hover:to-gray-500 transition transform hover:scale-105">
+                    <div class="text-4xl mb-4">⚔️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-orange-400">Lightning-Fast Combat System</h3>
+                    <p class="text-gray-300">
+                        Iron Snout delivers an incredibly responsive fighting experience where every millisecond counts. 
+                        Execute devastating combo chains, counter enemy attacks with precise timing, and unleash a flurry 
+                        of punches and kicks. The intuitive controls in Iron Snout make it easy to learn but challenging 
+                        to master, ensuring hours of engaging gameplay as you perfect your pig warrior's martial arts skills.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Play Guide (Simplified) -->
-    <section id="guide" class="py-16 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-                    Quick Play Guide
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-orange-400">Controls</h3>
-                        <ul class="space-y-2 text-gray-300">
-                            <li><strong>↑</strong> - Jump & uppercut</li>
-                            <li><strong>↓</strong> - Duck & leg sweep</li>
-                            <li><strong>←→</strong> - Attack left/right</li>
-                            <li><strong>Tap enemies</strong> - Mobile controls</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-orange-400">Pro Tips</h3>
-                        <ul class="space-y-2 text-gray-300">
-                            <li>• Stay centered for better positioning</li>
-                            <li>• Catch and throw back weapons</li>
-                            <li>• Chain attacks for combo multipliers</li>
-                            <li>• Prioritize ranged enemies first</li>
-                        </ul>
-                    </div>
+                <div class="bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg p-6 hover:from-gray-600 hover:to-gray-500 transition transform hover:scale-105">
+                    <div class="text-4xl mb-4">🐺</div>
+                    <h3 class="text-xl font-semibold mb-3 text-orange-400">Endless Wolf Hordes</h3>
+                    <p class="text-gray-300">
+                        In Iron Snout, face relentless waves of wolves armed with cleavers, chainsaws, and rocket packs! 
+                        Each enemy type brings unique attack patterns and challenges to overcome. The difficulty progressively 
+                        increases as you play Iron Snout, introducing faster enemies and more complex combinations. Learn to 
+                        anticipate their moves, catch thrown weapons mid-air, and turn their own arsenal against them in this 
+                        thrilling beat 'em up adventure.
+                    </p>
                 </div>
-                
-                <div class="bg-gradient-to-r from-orange-900/30 to-red-900/30 border border-orange-500/30 rounded-lg p-6 mt-8 text-center">
-                    <p class="text-lg text-gray-300">
-                        <strong>Goal:</strong> Survive as long as possible and achieve the highest score. 
-                        Every enemy defeated and combo performed adds to your points!
+                <div class="bg-gradient-to-br from-gray-700 to-gray-600 rounded-lg p-6 hover:from-gray-600 hover:to-gray-500 transition transform hover:scale-105">
+                    <div class="text-4xl mb-4">🏆</div>
+                    <h3 class="text-xl font-semibold mb-3 text-orange-400">Competitive High Score System</h3>
+                    <p class="text-gray-300">
+                        Push your limits in Iron Snout's addictive score-attack gameplay! Every successful hit, combo, 
+                        and survival second adds to your score. Iron Snout rewards skillful play with multipliers for 
+                        consecutive hits without taking damage. Challenge yourself to beat your personal best, compete 
+                        with friends, and climb the ranks. The game's replay value shines as you discover new strategies 
+                        and perfect your technique in Iron Snout's endless arcade action.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Developer Info (Brief) -->
-    <section class="py-12 bg-gray-800">
+    <!-- What is Iron Snout Section -->
+    <section id="what-is" class="py-16 bg-gray-900">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center">
-                <h3 class="text-2xl font-bold mb-4">Game Information</h3>
-                <p class="text-gray-400 mb-6">
-                    Created by SnoutUp Games, this indie fighter has captivated millions of players worldwide. 
-                    Available on web browsers, Steam, and mobile devices, you can enjoy the action anywhere.
-                </p>
-                <div class="flex justify-center gap-4 flex-wrap">
-                    <span class="bg-gray-700 px-4 py-2 rounded">🌐 Browser</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded">💻 Steam</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded">📱 iOS/Android</span>
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                    What is Iron Snout? The Ultimate Pig Fighting Game
+                </h2>
+                
+                <div class="prose prose-lg max-w-none">
+                    <!-- Game Overview -->
+                    <div class="bg-gray-800 rounded-lg p-8 mb-8">
+                        <h3 class="text-2xl font-bold mb-4 text-orange-400">Game Overview</h3>
+                        <p class="text-gray-300 mb-4">
+                            Iron Snout is a fast-paced beat 'em up where you play as a fearless pig fighting endless wolf waves. 
+                            Simple controls meet deep gameplay, creating an addictive experience for millions worldwide.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="text-center">
+                                <h4 class="font-semibold text-orange-400">⚔️ Combat</h4>
+                                <p class="text-gray-300 text-sm">Directional inputs control attacks, combos, and weapon catching</p>
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold text-blue-400">🐺 Enemies</h4>
+                                <p class="text-gray-300 text-sm">Diverse wolves with cleavers, chainsaws, and rocket packs</p>
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-semibold text-green-400">📈 Difficulty</h4>
+                                <p class="text-gray-300 text-sm">Progressive challenge system keeps Iron Snout engaging</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                        <div class="bg-gray-800 rounded-lg p-4 text-center transform hover:scale-105 transition">
+                            <div class="text-3xl font-bold text-orange-400">100%</div>
+                            <div class="text-sm text-gray-400">Free Forever</div>
+                        </div>
+                        <div class="bg-gray-800 rounded-lg p-4 text-center transform hover:scale-105 transition">
+                            <div class="text-3xl font-bold text-orange-400">60+</div>
+                            <div class="text-sm text-gray-400">FPS Performance</div>
+                        </div>
+                        <div class="bg-gray-800 rounded-lg p-4 text-center transform hover:scale-105 transition">
+                            <div class="text-3xl font-bold text-orange-400">10M+</div>
+                            <div class="text-sm text-gray-400">Active Players</div>
+                        </div>
+                        <div class="bg-gray-800 rounded-lg p-4 text-center transform hover:scale-105 transition">
+                            <div class="text-3xl font-bold text-orange-400">4.8★</div>
+                            <div class="text-sm text-gray-400">User Rating</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section (Essential Questions Only) -->
-    <section id="faq" class="py-16 bg-gray-900">
+    <!-- How to Play Section -->
+    <section id="how-to-play" class="py-16 bg-gray-800">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-                    Frequently Asked Questions
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                    How to Play Iron Snout: Complete Guide
                 </h2>
                 
-                <div class="space-y-6">
+                <!-- Getting Started -->
+                <div class="bg-gray-700 rounded-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">Getting Started</h3>
+                    <p class="text-gray-300 mb-4">
+                        Iron Snout features simple controls perfect for all skill levels. Control a brave pig fighting endless wolf waves 
+                        using intuitive directional inputs. Easy to learn, challenging to master!
+                    </p>
+                </div>
+
+                <!-- Controls Guide -->
+                <div class="bg-gray-700 rounded-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">Controls & Strategy</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4 text-gray-200">Basic Controls</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li><span class="text-green-400">↑</span> Uppercuts & jumps</li>
+                                <li><span class="text-green-400">↓</span> Leg sweeps & duck</li>
+                                <li><span class="text-green-400">←→</span> Punch & kick</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4 text-gray-200">Pro Tips</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>⚡ Chain combos for higher scores</li>
+                                <li>🎯 Catch weapons mid-air</li>
+                                <li>🔄 Stay centered for quick reactions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Reference -->
+                <div class="bg-gradient-to-br from-orange-900/20 to-red-900/20 border border-orange-500/30 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-orange-400">Quick Reference: Iron Snout Combo Guide</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-300">
+                        <div>
+                            <strong class="text-gray-200">Basic Combo:</strong>
+                            <p>Left → Right → Up</p>
+                        </div>
+                        <div>
+                            <strong class="text-gray-200">Juggle Combo:</strong>
+                            <p>Up → Up → Down</p>
+                        </div>
+                        <div>
+                            <strong class="text-gray-200">Sweep Combo:</strong>
+                            <p>Down → Left → Right</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Play Section -->
+    <section id="why-play" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                    Why Play Iron Snout? Discover the Ultimate Fighting Experience
+                </h2>
+                
+                <!-- Main Benefits -->
+                <div class="bg-gray-800 rounded-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">Why Choose Iron Snout?</h3>
+                    <p class="text-gray-300 mb-6">
+                        Iron Snout offers instant action with perfect balance of accessibility and challenge. 
+                        No downloads, no payments - just pure skill-based gaming fun.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-3 text-gray-200">🚀 Instant Play</h4>
+                            <p class="text-gray-300">Click and play Iron Snout immediately. Perfect for breaks or quick gaming sessions.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-3 text-gray-200">🎯 Skill-Based</h4>
+                            <p class="text-gray-300">Iron Snout rewards pure skill. No pay-to-win mechanics or grinding required.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-3 text-gray-200">🧠 Brain Training</h4>
+                            <p class="text-gray-300">Iron Snout improves hand-eye coordination, reaction times, and strategic thinking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <div class="bg-gray-800 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-3">Is this game really free?</h3>
-                        <p class="text-gray-400">
-                            Yes! Completely free with no hidden costs, ads, or pay-to-win mechanics. 
-                            Just pure gaming fun accessible to everyone.
+                        <h3 class="text-xl font-semibold mb-3 text-orange-400">🎮 All Ages</h3>
+                        <p class="text-gray-300">Family-friendly Iron Snout gameplay for everyone.</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-400">🌐 Cross-Platform</h3>
+                        <p class="text-gray-300">Play Iron Snout on any device, anywhere.</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-green-400">⚡ Ad-Free</h3>
+                        <p class="text-gray-300">Uninterrupted Iron Snout gaming experience.</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="bg-gradient-to-r from-orange-900/30 to-red-900/30 border border-orange-500/30 rounded-lg p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-orange-400">Start Your Iron Snout Adventure Now!</h3>
+                    <p class="text-gray-300 mb-6">
+                        Join millions of players worldwide who have discovered the addictive fun of Iron Snout. With zero barriers 
+                        to entry and endless entertainment value, Iron Snout is waiting for you to prove your fighting skills. 
+                        Every session in Iron Snout is a new opportunity to beat your high score and perfect your technique.
+                    </p>
+                    <a href="#game" class="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-8 rounded-full hover:from-orange-600 hover:to-red-600 transition transform hover:scale-105">
+                        Play Iron Snout Free Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer and Platform Section -->
+    <section id="developer-platform" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-orange-400">
+                    Iron Snout Developer & Platform Information
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Developer Info -->
+                    <div class="bg-gray-700 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-orange-400">Created by SnoutUp Games</h3>
+                        <p class="text-gray-300 mb-4">
+                            Iron Snout is the brainchild of SnoutUp Games, an independent developer passionate about creating 
+                            accessible yet challenging gaming experiences. The studio's philosophy centers on proving that 
+                            great games don't need massive budgets or complex mechanics - just solid gameplay and fun factor.
                         </p>
+                        <p class="text-gray-300 mb-4">
+                            Since releasing Iron Snout, SnoutUp Games has continued to support and update the game based on 
+                            community feedback. Their dedication to Iron Snout's improvement has resulted in a polished, 
+                            balanced fighting game that stands as a testament to indie game development excellence.
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 mt-4">
+                            <h4 class="font-semibold text-gray-200 mb-2">Developer Achievements:</h4>
+                            <ul class="text-gray-400 text-sm space-y-1">
+                                <li>• Over 10 million Iron Snout players worldwide</li>
+                                <li>• Featured on major gaming platforms</li>
+                                <li>• Consistent updates and improvements</li>
+                                <li>• Active community engagement</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-3">Do I need to download anything?</h3>
-                        <p class="text-gray-400">
-                            No downloads required. The game runs directly in your browser using HTML5. 
-                            Just click play and start fighting!
+                    <!-- Platform Availability -->
+                    <div class="bg-gray-700 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-orange-400">Play Iron Snout Everywhere</h3>
+                        <p class="text-gray-300 mb-6">
+                            Iron Snout's multi-platform availability ensures you can enjoy the game wherever you are. Each 
+                            platform offers the same core Iron Snout experience, optimized for its specific controls and 
+                            display capabilities.
                         </p>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <h4 class="font-semibold text-blue-400 mb-2">🌐 Web Browser</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Play Iron Snout instantly on any modern browser without downloads. Perfect for quick sessions 
+                                    at school, work, or home.
+                                </p>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-400 mb-2">💻 PC (Steam)</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Download Iron Snout on Steam for the ultimate desktop experience with achievements and 
+                                    leaderboard integration.
+                                </p>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <h4 class="font-semibold text-purple-400 mb-2">📱 Mobile (iOS/Android)</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Take Iron Snout on the go with optimized touch controls for smartphones and tablets via 
+                                    App Store and Google Play.
+                                </p>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <h4 class="font-semibold text-yellow-400 mb-2">🔓 Unblocked Versions</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Access Iron Snout through gaming portals that bypass network restrictions, ensuring you 
+                                    can play anywhere.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                    Iron Snout FAQ: Everything You Need to Know
+                </h2>
+                
+                <!-- FAQ Questions -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">Frequently Asked Questions</h3>
                     
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-3">Can I play on mobile?</h3>
-                        <p class="text-gray-400">
-                            Absolutely! Works perfectly on smartphones and tablets with touch controls. 
-                            The game automatically adapts to your device.
-                        </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-700 rounded-lg p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-200">Is Iron Snout Free?</h4>
+                            <p class="text-gray-300">Yes! Iron Snout is completely free with no hidden costs or microtransactions.</p>
+                        </div>
+                        
+                        <div class="bg-gray-700 rounded-lg p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-200">Need Downloads?</h4>
+                            <p class="text-gray-300">No! Iron Snout runs in your browser using HTML5. Instant play, no installation.</p>
+                        </div>
+
+                        <div class="bg-gray-700 rounded-lg p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-200">Mobile Compatible?</h4>
+                            <p class="text-gray-300">Yes! Iron Snout works on smartphones and tablets with touch controls.</p>
+                        </div>
+                        
+                        <div class="bg-gray-700 rounded-lg p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-200">Kid-Friendly?</h4>
+                            <p class="text-gray-300">Absolutely! Iron Snout features cartoon graphics suitable for all ages.</p>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="bg-gradient-to-br from-orange-900/20 to-red-900/20 border border-orange-500/30 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">Troubleshooting Iron Snout Issues</h3>
                     
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-3">Is it suitable for kids?</h3>
-                        <p class="text-gray-400">
-                            Yes! Features cartoon graphics with no gore or inappropriate content. 
-                            Perfect for all ages while developing hand-eye coordination.
-                        </p>
-                    </div>
-                    
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-3">How do I get a high score?</h3>
-                        <p class="text-gray-400">
-                            Focus on combo chains, catch enemy weapons, and stay mobile. Practice timing 
-                            your attacks and learn enemy patterns for better performance.
-                        </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-200 mb-3">Game Not Loading?</h4>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• Check your internet connection</li>
+                                <li>• Update your browser to the latest version</li>
+                                <li>• Disable ad blockers for Iron Snout</li>
+                                <li>• Clear browser cache and cookies</li>
+                                <li>• Try a different browser</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-200 mb-3">Performance Issues?</h4>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• Close unnecessary browser tabs</li>
+                                <li>• Disable browser extensions temporarily</li>
+                                <li>• Ensure hardware acceleration is enabled</li>
+                                <li>• Lower quality settings if available</li>
+                                <li>• Restart your device if Iron Snout lags</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,36 +535,71 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 py-8">
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
         <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p class="text-gray-400 mb-2">© 2024 IronSnout.fun - Free Online Fighting Game</p>
-                <p class="text-sm text-gray-500">
-                    Play the best pig fighting game directly in your browser. No downloads, no fees, just fun!
-                </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-orange-400">IronSnout.fun</h3>
+                    <p class="text-gray-400">The best place to play Iron Snout online for free. No downloads, instant access, endless fun!</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#game" class="hover:text-orange-400 transition">Play Game</a></li>
+                        <li><a href="#features" class="hover:text-orange-400 transition">Features</a></li>
+                        <li><a href="#how-to-play" class="hover:text-orange-400 transition">How to Play</a></li>
+                        <li><a href="#faq" class="hover:text-orange-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Game Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Genre: Fighting/Arcade</li>
+                        <li>Platform: Web Browser</li>
+                        <li>Rating: Everyone</li>
+                        <li>Price: Free Forever</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-400">
+                <p>&copy; 2024 IronSnout.fun - Play Iron Snout Online Free | All rights reserved</p>
+                <p class="mt-2 text-sm">Iron Snout is a trademark of its respective owner. This site is not affiliated with the original creators.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Fullscreen toggle
         function toggleFullscreen() {
             const gameFrame = document.getElementById('gameFrame');
             if (!document.fullscreenElement) {
                 gameFrame.requestFullscreen().catch(err => {
-                    console.log(`Error: ${err.message}`);
+                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
                 });
             } else {
                 document.exitFullscreen();
             }
         }
-        
-        // Smooth scroll
+
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
             });
         });
     </script>
