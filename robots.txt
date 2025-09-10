@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
+Sitemap: https://ironsnout.fun/sitemapindex.xml
 Sitemap: https://ironsnout.fun/sitemap.xml
 
 # Allow crawlers to access all static assets
