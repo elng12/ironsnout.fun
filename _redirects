@@ -1,2 +1,5 @@
 # 确保根路径不被错误跳转
 # 不做多余跳转，只保持 200
+
+# 强制使用我们的 robots.txt，不使用 Cloudflare 管理版本
+/robots.txt /robots.txt 200!
