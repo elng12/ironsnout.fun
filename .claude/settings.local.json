@@ -5,7 +5,10 @@
       "Bash(bash:*)",
       "Bash(curl:*)",
       "Bash(git config:*)",
-      "Bash(gh:*)"
+      "Bash(gh:*)",
+      "Read(//mnt/f/**)",
+      "Bash(git add _headers)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix sitemap indexing: Remove X-Robots-Tag noindex from robots.txt\n\n- Removed X-Robots-Tag: noindex from _headers file that was blocking search engines from indexing sitemap\n- Extended robots.txt cache time to 86400 seconds (24 hours) for better performance\n- This fix allows Google and other search engines to properly crawl and index the sitemap\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
