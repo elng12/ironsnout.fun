@@ -1,28 +1,8 @@
-# Iron Snout Game - Robots.txt
+# Iron Snout Game – robots.txt
 # Updated: 2025-09-16
 
 User-agent: *
 Allow: /
 
-# Primary Sitemap Locations
-Sitemap: https://ironsnout.fun/sitemapindex.xml
+# Primary Sitemap Location
 Sitemap: https://ironsnout.fun/sitemap.xml
-
-# Allow crawlers to access all static assets
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.webp$
-Allow: /*.ico$
-
-# Block access to system files and directories
-Disallow: /.htaccess
-Disallow: /.git/
-Disallow: /admin/
-Disallow: /private/
-
-# Prevent Cloudflare managed content override
-# This file is maintained manually

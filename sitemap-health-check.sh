@@ -35,12 +35,12 @@ fi
 # 检查所有sitemap中的URL
 echo "🔗 检查站点地图中的所有URL..."
 urls=("https://ironsnout.fun/" 
-      "https://ironsnout.fun/features.html"
-      "https://ironsnout.fun/how-to-play.html"
-      "https://ironsnout.fun/faq.html"
-      "https://ironsnout.fun/about.html"
-      "https://ironsnout.fun/privacy.html"
-      "https://ironsnout.fun/contact.html")
+      "https://ironsnout.fun/features"
+      "https://ironsnout.fun/how-to-play"
+      "https://ironsnout.fun/faq"
+      "https://ironsnout.fun/about"
+      "https://ironsnout.fun/privacy"
+      "https://ironsnout.fun/contact")
 
 for url in "${urls[@]}"; do
     response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
