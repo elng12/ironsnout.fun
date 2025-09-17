@@ -3,7 +3,9 @@
     "allow": [
       "WebFetch(domain:ironsnout.io)",
       "Bash(bash:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git config:*)",
+      "Bash(gh:*)"
     ],
     "deny": [],
     "ask": []
