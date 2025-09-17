@@ -45,6 +45,27 @@
         .logo-img:hover {
             transform: scale(1.1) rotate(-5deg);
         }
+        
+        /* 游戏启动按钮动画 */
+        .game-launch-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-launch-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .game-launch-btn:hover::before {
+            left: 100%;
+        }
     </style>
     
     <!-- Structured Data -->
@@ -146,15 +167,72 @@
                         </svg>
                     </button>
                 </div>
-                <div class="relative w-full" style="padding-bottom: 60%;">
-                    <iframe 
-                        id="gameFrame"
-                        src="https://www.crazygames.com/embed/iron-snout" 
-                        class="absolute top-0 left-0 w-full h-full"
-                        frameborder="0" 
-                        allowfullscreen 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-                    </iframe>
+                <!-- Game Launch Section -->
+                <div class="relative w-full bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl border-2 border-orange-500/30 p-8 text-center" style="min-height: 400px;">
+                    <div class="flex flex-col items-center justify-center h-full space-y-6">
+                        <!-- Game Preview Image -->
+                        <div class="w-32 h-32 bg-orange-500/20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-16 h-16 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Game Title -->
+                        <h2 class="text-3xl font-bold text-white mb-2">Ready to Fight?</h2>
+                        <p class="text-gray-300 text-lg mb-6 max-w-md">
+                            Join the epic pig vs wolves battle! Fast-paced action awaits you.
+                        </p>
+                        
+                        <!-- Play Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 items-center">
+                            <!-- Primary Game Link -->
+                            <a href="https://classroom8.github.io/iron-snout/" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="game-launch-btn bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center space-x-2">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <span>Play Iron Snout Now</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                            
+                            <!-- Alternative Game Link -->
+                            <a href="https://www.crazygames.com/game/iron-snout" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center space-x-2">
+                                <span>Alternative Version</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        <!-- Game Info -->
+                        <div class="mt-6 flex flex-wrap gap-4 justify-center text-sm text-gray-400">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                Free to Play
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89L8.78 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/>
+                                </svg>
+                                Instant Play
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+                                </svg>
+                                No Download
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -578,17 +656,22 @@
             menu.classList.toggle('hidden');
         }
 
-        // Fullscreen toggle
-        function toggleFullscreen() {
-            const gameFrame = document.getElementById('gameFrame');
-            if (!document.fullscreenElement) {
-                gameFrame.requestFullscreen().catch(err => {
-                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
-                });
-            } else {
-                document.exitFullscreen();
-            }
+        // Game launch tracking
+        function trackGameLaunch(platform) {
+            console.log(`Game launched via ${platform}`);
+            // 这里可以添加分析代码
         }
+        
+        // 为游戏链接添加点击追踪
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameLinks = document.querySelectorAll('a[href*="iron-snout"]');
+            gameLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const platform = this.href.includes('classroom8') ? 'GitHub' : 'CrazyGames';
+                    trackGameLaunch(platform);
+                });
+            });
+        });
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

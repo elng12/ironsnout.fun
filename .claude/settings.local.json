@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:ironsnout.io)"
+      "WebFetch(domain:ironsnout.io)",
+      "Bash(bash:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
