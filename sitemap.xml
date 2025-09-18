@@ -12,37 +12,37 @@
         </image:image>
     </url>
     <url>
-        <loc>https://ironsnout.fun/features</loc>
+        <loc>https://ironsnout.fun/features.html</loc>
         <lastmod>2025-09-16T08:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://ironsnout.fun/how-to-play</loc>
+        <loc>https://ironsnout.fun/how-to-play.html</loc>
         <lastmod>2025-09-16T08:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://ironsnout.fun/faq</loc>
+        <loc>https://ironsnout.fun/faq.html</loc>
         <lastmod>2025-09-16T08:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://ironsnout.fun/about</loc>
+        <loc>https://ironsnout.fun/about.html</loc>
         <lastmod>2025-09-16T08:00:00+00:00</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://ironsnout.fun/privacy</loc>
+        <loc>https://ironsnout.fun/privacy.html</loc>
         <lastmod>2025-09-16T08:00:00+00:00</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.4</priority>
     </url>
     <url>
-        <loc>https://ironsnout.fun/contact</loc>
+        <loc>https://ironsnout.fun/contact.html</loc>
         <lastmod>2025-09-16T08:00:00+00:00</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.4</priority>
