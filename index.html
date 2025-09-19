@@ -33,6 +33,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3219924658522446"
+            crossorigin="anonymous"></script>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -157,6 +161,18 @@
                 </div>
             </div>
             
+            <!-- 顶部广告位 -->
+            <div class="max-w-4xl mx-auto mb-6">
+                <div class="bg-gray-800/50 rounded-lg p-4 text-center">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3219924658522446"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                </div>
+            </div>
+            
             <!-- Game Container -->
             <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
                 <div class="bg-gray-700 px-4 py-2 flex justify-between items-center">
@@ -233,6 +249,18 @@
                             </span>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- 游戏下方广告位 -->
+            <div class="max-w-4xl mx-auto mt-6">
+                <div class="bg-gray-800/50 rounded-lg p-4 text-center">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3219924658522446"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
                 </div>
             </div>
         </div>
@@ -615,6 +643,22 @@
         </div>
     </section>
 
+    <!-- 底部广告位 -->
+    <section class="py-8 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-700/50 rounded-lg p-4 text-center">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3219924658522446"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 py-8">
         <div class="container mx-auto px-4">
@@ -687,6 +731,18 @@
                     document.getElementById('mobileMenu').classList.add('hidden');
                 }
             });
+        });
+        
+        // 初始化 AdSense 广告
+        window.addEventListener('load', function() {
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                console.log('AdSense 广告已初始化');
+            } catch (error) {
+                console.error('AdSense 初始化错误:', error);
+            }
         });
     </script>
 </body>
