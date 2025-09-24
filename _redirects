@@ -3,3 +3,5 @@
 
 # 强制使用我们的 robots.txt，不使用 Cloudflare 管理版本
 /robots.txt /robots.txt 200!
+# 统一联系页规范URL（永久重定向）
+/contact.html /contact 301!
