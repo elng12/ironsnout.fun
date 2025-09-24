@@ -3,5 +3,17 @@
 
 # 强制使用我们的 robots.txt，不使用 Cloudflare 管理版本
 /robots.txt /robots.txt 200!
+
 # 统一联系页规范URL（永久重定向）
 /contact.html /contact 301!
+
+# 统一协议与域名（首选 https://ironsnout.fun）
+# 强制 HTTP -> HTTPS
+http://ironsnout.fun/* https://ironsnout.fun/:splat 301!
+http://www.ironsnout.fun/* https://ironsnout.fun/:splat 301!
+
+# 强制 www -> 非 www
+https://www.ironsnout.fun/* https://ironsnout.fun/:splat 301!
+
+# 归并首页历史路径，减少重复URL与潜在404
+/index.html / 301!
